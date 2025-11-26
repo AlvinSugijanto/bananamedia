@@ -1,0 +1,6 @@
+# Ignore generated prompt files
+prompt_*.md
+
+# Keep this .gitignore file
+!.gitignore
+

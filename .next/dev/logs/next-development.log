@@ -1,0 +1,1571 @@
+[00:00:01.362] Server  LOG      ✓ Ready in 1021ms
+[00:00:07.008] Server  LOG      ○ Compiling / ...
+[00:00:10.739] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:14.470] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:25.190] Browser WARN    Dialog is changing from uncontrolled to controlled. Components should not switch from controlled to uncontrolled (or vice versa). Decide between using a controlled or uncontrolled value for the lifetime of the component.
+[00:01:58.638] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:01.100] Browser WARN    Dialog is changing from uncontrolled to controlled. Components should not switch from controlled to uncontrolled (or vice versa). Decide between using a controlled or uncontrolled value for the lifetime of the component.
+[00:03:04.290] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0x6037fe2a6d549c122b3268f8851701da60c448fc9aa8044e630e64da24f1da8e"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:03:04.293] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0x6037fe2a6d549c122b3268f8851701da60c448fc9aa8044e630e64da24f1da8e"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:03:21.466] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0x6037fe2a6d549c122b3268f8851701da60c448fc9aa8044e630e64da24f1da8e"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:03:21.467] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0x6037fe2a6d549c122b3268f8851701da60c448fc9aa8044e630e64da24f1da8e"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:03:22.361] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0x6037fe2a6d549c122b3268f8851701da60c448fc9aa8044e630e64da24f1da8e"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:03:22.361] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0x6037fe2a6d549c122b3268f8851701da60c448fc9aa8044e630e64da24f1da8e"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:03:32.495] Browser ERROR   Error: {}
+[00:03:32.496] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0x6037fe2a6d549c122b3268f8851701da60c448fc9aa8044e630e64da24f1da8e"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:03:32.496] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0x6037fe2a6d549c122b3268f8851701da60c448fc9aa8044e630e64da24f1da8e"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:03:48.664] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0x3c40e5635b3e125b6c4c8a48a2bac78472bf7bc9a829e0d77418103dc3114f25"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:03:48.668] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0x3c40e5635b3e125b6c4c8a48a2bac78472bf7bc9a829e0d77418103dc3114f25"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:03:50.930] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0x3c40e5635b3e125b6c4c8a48a2bac78472bf7bc9a829e0d77418103dc3114f25"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:03:50.930] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0x3c40e5635b3e125b6c4c8a48a2bac78472bf7bc9a829e0d77418103dc3114f25"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:04:00.677] Browser ERROR   Error: {}
+[00:04:00.678] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0x3c40e5635b3e125b6c4c8a48a2bac78472bf7bc9a829e0d77418103dc3114f25"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:04:00.678] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0x3c40e5635b3e125b6c4c8a48a2bac78472bf7bc9a829e0d77418103dc3114f25"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:04:11.741] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:04:11.742] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:06:52.492] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:06:52.495] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:07:19.031] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:07:19.032] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:07:19.354] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:07:19.354] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:07:29.135] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:07:30.194] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:07:30.194] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:07:32.070] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:07:32.070] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:07:33.375] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:07:33.375] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:07:50.487] Browser ERROR   Error: {}
+[00:07:50.487] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:07:50.487] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:08:06.980] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:07.954] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:08:07.954] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:08:30.091] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:08:30.091] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:08:31.650] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:08:31.650] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:08:47.877] Browser ERROR   Error: {}
+[00:08:47.877] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:08:47.877] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:08:56.740] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:57.682] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:08:57.682] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:09:13.604] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:09:13.604] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:09:15.203] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:09:15.204] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:09:27.056] Browser ERROR   Error: {}
+[00:09:27.056] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:09:27.056] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:09:29.120] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:30.055] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:09:30.055] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:10:12.696] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:10:12.701] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:10:18.249] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:10:18.249] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:11:18.850] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:11:18.861] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:11:20.062] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:11:20.063] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:11:29.474] Browser ERROR   Error: {}
+[00:11:29.474] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:11:29.474] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:11:32.770] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:33.684] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:11:33.684] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:12:40.223] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:12:40.224] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:12:53.777] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:12:53.778] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:13:05.597] Browser ERROR   Error: {}
+[00:13:05.598] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:13:05.598] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:13:21.951] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:22.886] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:13:22.886] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:13:25.225] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:13:25.225] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:13:26.392] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:13:26.392] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:14:43.685] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:44.572] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:14:44.572] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:14:48.623] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:49.134] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:14:49.134] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0xe0beb8af87f36cdf9b854f22e3e23f6002e2e8b83894f9496d97fbfdc1f9e11c"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 1,
+      "flour": 10,
+      "olive_oils": 10,
+      "pineapple": 1,
+      "salt": 1,
+      "tomato_sauce": 10,
+      "water": 100,
+      "yeast": 1
+    }
+  }
+}
+[00:14:52.037] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:26.893] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0x41a6c6061655f549c6f5946a058d342cf96b863f7b8249428a67c9d00c8bdd3f"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 180,
+      "flour": 610,
+      "olive_oils": 10,
+      "pineapple": 0,
+      "salt": 18,
+      "tomato_sauce": 200,
+      "water": 370,
+      "yeast": 3
+    }
+  }
+}
+[00:15:26.893] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0x41a6c6061655f549c6f5946a058d342cf96b863f7b8249428a67c9d00c8bdd3f"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 180,
+      "flour": 610,
+      "olive_oils": 10,
+      "pineapple": 0,
+      "salt": 18,
+      "tomato_sauce": 200,
+      "water": 370,
+      "yeast": 3
+    }
+  }
+}
+[00:15:36.082] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0x41a6c6061655f549c6f5946a058d342cf96b863f7b8249428a67c9d00c8bdd3f"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 180,
+      "flour": 610,
+      "olive_oils": 10,
+      "pineapple": 0,
+      "salt": 18,
+      "tomato_sauce": 200,
+      "water": 370,
+      "yeast": 3
+    }
+  }
+}
+[00:15:36.083] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0x41a6c6061655f549c6f5946a058d342cf96b863f7b8249428a67c9d00c8bdd3f"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 180,
+      "flour": 610,
+      "olive_oils": 10,
+      "pineapple": 0,
+      "salt": 18,
+      "tomato_sauce": 200,
+      "water": 370,
+      "yeast": 3
+    }
+  }
+}
+[00:15:36.800] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0x41a6c6061655f549c6f5946a058d342cf96b863f7b8249428a67c9d00c8bdd3f"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 180,
+      "flour": 610,
+      "olive_oils": 10,
+      "pineapple": 0,
+      "salt": 18,
+      "tomato_sauce": 200,
+      "water": 370,
+      "yeast": 3
+    }
+  }
+}
+[00:15:36.800] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0x41a6c6061655f549c6f5946a058d342cf96b863f7b8249428a67c9d00c8bdd3f"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 180,
+      "flour": 610,
+      "olive_oils": 10,
+      "pineapple": 0,
+      "salt": 18,
+      "tomato_sauce": 200,
+      "water": 370,
+      "yeast": 3
+    }
+  }
+}
+[00:15:45.018] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0x41a6c6061655f549c6f5946a058d342cf96b863f7b8249428a67c9d00c8bdd3f"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 180,
+      "flour": 610,
+      "olive_oils": 10,
+      "pineapple": 0,
+      "salt": 18,
+      "tomato_sauce": 200,
+      "water": 370,
+      "yeast": 3
+    }
+  }
+}
+[00:15:45.018] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0x41a6c6061655f549c6f5946a058d342cf96b863f7b8249428a67c9d00c8bdd3f"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 180,
+      "flour": 610,
+      "olive_oils": 10,
+      "pineapple": 0,
+      "salt": 18,
+      "tomato_sauce": 200,
+      "water": 370,
+      "yeast": 3
+    }
+  }
+}
+[00:15:45.696] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0x41a6c6061655f549c6f5946a058d342cf96b863f7b8249428a67c9d00c8bdd3f"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 180,
+      "flour": 610,
+      "olive_oils": 10,
+      "pineapple": 0,
+      "salt": 18,
+      "tomato_sauce": 200,
+      "water": 370,
+      "yeast": 3
+    }
+  }
+}
+[00:15:45.696] Browser LOG     Object fields structure: {
+  "id": {
+    "id": "0x41a6c6061655f549c6f5946a058d342cf96b863f7b8249428a67c9d00c8bdd3f"
+  },
+  "pizza": {
+    "type": "0x150da6a3a1a755cd33561dc80770fa7532dd043d029fc77cade3d19a0209cadc::pizza::Pizza",
+    "fields": {
+      "cheese": 180,
+      "flour": 610,
+      "olive_oils": 10,
+      "pineapple": 0,
+      "salt": 18,
+      "tomato_sauce": 200,
+      "water": 370,
+      "yeast": 3
+    }
+  }
+}
