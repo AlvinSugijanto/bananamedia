@@ -12,8 +12,9 @@ A decentralized social media platform built on IOTA blockchain using Move smart 
 
 ## 📍 Contract Address
 
+![BananaMedia Screenshot](public/screenshot.png)
 **Network**: Testnet  
-**Package ID**: Update after deployment  
+**Package ID**: 0x7f453c53da60b42eaa1554ec3c1637937832e8d4d9558a1f16bc3ccba03f4866  
 **Module**: `social_media`
 
 ## 🚀 Getting Started
