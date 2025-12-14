@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback, useMemo } from "react"
 import {
   useCurrentAccount,
   useIotaClient,
@@ -16,35 +16,81 @@ import { TESTNET_PACKAGE_ID } from "@/lib/config"
 // ============================================================================
 
 const PACKAGE_ID = TESTNET_PACKAGE_ID
-export const CONTRACT_MODULE = "pizza"
+export const CONTRACT_MODULE = "social_media"
 export const CONTRACT_METHODS = {
-  COOK: "cook",
+  CREATE_PROFILE: "create_profile",
+  UPDATE_PROFILE: "update_profile",
+  CREATE_POST: "create_post",
+  LIKE_POST: "like_post",
+  UNLIKE_POST: "unlike_post",
+  CREATE_COMMENT: "create_comment",
+  FOLLOW_USER: "follow_user",
+  SHARE_POST: "share_post",
 } as const
 
 // ============================================================================
 // DATA EXTRACTION
 // ============================================================================
 
-function getObjectFields(data: IotaObjectData): { owner: string } | null {
-  if (data.content?.dataType !== "moveObject") {
-    console.log("Data is not a moveObject:", data.content?.dataType)
-    return null
-  }
+export interface UserProfile {
+  id: string
+  owner: string
+  username: string
+  bio: string
+  follower_count: number
+  following_count: number
+  post_count: number
+  created_at: number
+}
 
+export interface Post {
+  id: string
+  author: string
+  content: string
+  like_count: number
+  comment_count: number
+  created_at: number
+  likes: string[]
+}
+
+export interface Comment {
+  id: string
+  post_id: string
+  author: string
+  content: string
+  created_at: number
+}
+
+function extractUserProfile(data: IotaObjectData): UserProfile | null {
+  if (data.content?.dataType !== "moveObject") return null
   const fields = data.content.fields as any
-  if (!fields) {
-    console.log("No fields found in object data")
-    return null
-  }
-
-  console.log("Object fields structure:", JSON.stringify(fields, null, 2))
-
-  const owner = data.owner && typeof data.owner === "object" && "AddressOwner" in data.owner
-    ? String(data.owner.AddressOwner)
-    : ""
+  if (!fields) return null
 
   return {
-    owner,
+    id: data.objectId,
+    owner: fields.owner || "",
+    username: fields.username || "",
+    bio: fields.bio || "",
+    follower_count: Number(fields.follower_count || 0),
+    following_count: Number(fields.following_count || 0),
+    post_count: Number(fields.post_count || 0),
+    created_at: Number(fields.created_at || 0),
+  }
+}
+
+function extractPost(data: IotaObjectData): Post | null {
+  if (data.content?.dataType !== "moveObject") return null
+  const fields = data.content.fields as any
+  if (!fields) return null
+
+  return {
+    id: data.objectId,
+    author: fields.author || "",
+    content: fields.content || "",
+    like_count: Number(fields.like_count || 0),
+    comment_count: Number(fields.comment_count || 0),
+    created_at: Number(fields.created_at || 0),
+    likes: fields.likes || [],
   }
 }
 
@@ -52,29 +98,23 @@ function getObjectFields(data: IotaObjectData): { owner: string } | null {
 // MAIN HOOK
 // ============================================================================
 
-export interface ContractData {
-  owner: string
-}
-
 export interface ContractState {
   isLoading: boolean
   isPending: boolean
-  isConfirming: boolean
-  isConfirmed: boolean
   hash: string | undefined
   error: Error | null
 }
 
 export interface ContractActions {
-  cook: (
-    recipient: string,
-    pepperoniAmounts: number[],
-    sausageAmounts: number[],
-    cheeseAmounts: number[],
-    onionAmounts: number[],
-    chivesAmounts: number[]
-  ) => Promise<void>
-  clearObject: () => void
+  createProfile: (username: string, bio: string) => Promise<void>
+  updateProfile: (profileId: string, username: string, bio: string) => Promise<void>
+  createPost: (profileId: string, content: string) => Promise<void>
+  likePost: (postId: string) => Promise<void>
+  unlikePost: (postId: string) => Promise<void>
+  createComment: (postId: string, content: string) => Promise<void>
+  followUser: (profileId: string, userAddress: string) => Promise<void>
+  sharePost: (postId: string, recipient: string) => Promise<void>
+  getPostComments: (postId: string) => Promise<Comment[]>
 }
 
 export const useContract = () => {
@@ -82,137 +122,538 @@ export const useContract = () => {
   const address = currentAccount?.address
   const iotaClient = useIotaClient()
   const { mutate: signAndExecute, isPending } = useSignAndExecuteTransaction()
-  const [objectId, setObjectId] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [hash, setHash] = useState<string | undefined>()
   const [transactionError, setTransactionError] = useState<Error | null>(null)
+  const [userProfile, setUserProfile] = useState<UserProfile | null>(null)
+  const [allPosts, setAllPosts] = useState<Post[]>([])
+
+  // Fetch user profile
+  const fetchProfile = async () => {
+    if (!address) {
+       setUserProfile(null)
+       return
+    }
+
+    try {
+      const objects = await iotaClient.getOwnedObjects({
+        owner: address,
+        filter: {
+          StructType: `${PACKAGE_ID}::${CONTRACT_MODULE}::UserProfile`,
+        },
+        options: {
+          showContent: true,
+        },
+      })
+
+      if (objects.data.length > 0 && objects.data[0].data) {
+        const profile = extractUserProfile(objects.data[0].data)
+        setUserProfile(profile)
+      } else {
+        // Important: If no profile found for this address, reset state to null
+        setUserProfile(null)
+      }
+    } catch (error) {
+      console.error("Error fetching profile:", error)
+      setUserProfile(null)
+    }
+  }
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const hash = window.location.hash.slice(1)
-      if (hash) setObjectId(hash)
+    fetchProfile()
+  }, [address, iotaClient])
+
+  // Fetch all posts (Global Feed)
+  const fetchAllPosts = async () => {
+    try {
+      // 1. Get all PostCreated events to find all Post IDs
+      // Note: In a production app, you would page through these.
+      const events = await iotaClient.queryEvents({
+        query: {
+          MoveModule: {
+            package: PACKAGE_ID,
+            module: CONTRACT_MODULE,
+          }
+        },
+        limit: 50,
+        order: "descending"
+      });
+
+      // 2. Extract unique Post IDs
+      const postIds = Array.from(new Set(
+        events.data.map(event => {
+           const parsedJson = event.parsedJson as any;
+           return parsedJson?.id || null;
+        }).filter(id => id !== null)
+      ));
+
+      if (postIds.length === 0) {
+        setAllPosts([]);
+        return;
+      }
+
+      // 3. Fetch object details for these IDs
+      const objects = await iotaClient.multiGetObjects({
+        ids: postIds,
+        options: {
+          showContent: true,
+        }
+      });
+
+      // 4. Map to Post interface
+      const posts = objects
+        .map(obj => obj.data ? extractPost(obj.data) : null)
+        .filter((p): p is Post => p !== null)
+        // Sort again by created_at just to be sure (events are desc, but parallel fetch might return any order)
+        .sort((a, b) => b.created_at - a.created_at);
+
+      setAllPosts(posts);
+
+    } catch (error) {
+      console.error("Error fetching posts:", error)
+      // Fallback: If event query fails (e.g. strict typing), keep old behavior or empty
     }
-  }, [])
+  }
 
-  const { data, isPending: isFetching, error: queryError, refetch } = useIotaClientQuery(
-    "getObject",
-    {
-      id: objectId!,
-      options: { showContent: true, showOwner: true },
-    },
-    {
-      enabled: !!objectId,
+  useEffect(() => {
+    if (address) {
+      fetchAllPosts()
     }
-  )
+  }, [address])
 
-  const fields = data?.data ? getObjectFields(data.data) : null
-  const isOwner = fields?.owner.toLowerCase() === address?.toLowerCase()
+  const handleTransactionSuccess = async (digest: string) => {
+    try {
+      setHash(digest)
+      await iotaClient.waitForTransaction({ digest })
+      
+      // Add a small delay for indexer consistency
+      await new Promise(resolve => setTimeout(resolve, 1000))
+      
+      // Refetch data
+      await Promise.all([
+        fetchProfile(),
+        fetchAllPosts()
+      ])
+    } catch (error) {
+       console.error("Error waiting for transaction:", error)
+    } finally {
+       setIsLoading(false)
+    }
+  }
 
-  const objectExists = !!data?.data
-  const hasValidData = !!fields
-
-  const cook = async (
-    recipient: string,
-    pepperoniAmounts: number[],
-    sausageAmounts: number[],
-    cheeseAmounts: number[],
-    onionAmounts: number[],
-    chivesAmounts: number[]
-  ) => {
+  const createProfile = useCallback(async (username: string, bio: string) => {
     try {
       setIsLoading(true)
       setTransactionError(null)
-      setHash(undefined)
       const tx = new Transaction()
+      
       tx.moveCall({
         arguments: [
-          tx.pure.address(recipient),
-          tx.pure.vector("u16", pepperoniAmounts),
-          tx.pure.vector("u16", sausageAmounts),
-          tx.pure.vector("u16", cheeseAmounts),
-          tx.pure.vector("u16", onionAmounts),
-          tx.pure.vector("u16", chivesAmounts)
+          tx.pure.string(username),
+          tx.pure.string(bio),
+          tx.object("0x6"), // Clock object
         ],
-        target: `${PACKAGE_ID}::${CONTRACT_MODULE}::${CONTRACT_METHODS.COOK}`,
+        target: `${PACKAGE_ID}::${CONTRACT_MODULE}::${CONTRACT_METHODS.CREATE_PROFILE}`,
       })
 
       signAndExecute(
         { transaction: tx },
         {
-          onSuccess: async ({ digest }) => {
-            setHash(digest)
-            try {
-              const { effects } = await iotaClient.waitForTransaction({
-                digest,
-                options: { showEffects: true },
-              })
-              const newObjectId = effects?.created?.[0]?.reference?.objectId
-              if (newObjectId) {
-                setObjectId(newObjectId)
-                if (typeof window !== "undefined") {
-                  window.location.hash = newObjectId
-                }
-                setIsLoading(false)
-              } else {
-                setIsLoading(false)
-                console.warn("No object ID found in transaction effects")
-              }
-            } catch (waitError) {
-              console.error("Error waiting for transaction:", waitError)
-              setIsLoading(false)
-            }
-          },
+          onSuccess: ({ digest }) => handleTransactionSuccess(digest),
           onError: (err) => {
-            const error = err instanceof Error ? err : new Error(String(err))
-            setTransactionError(error)
-            console.error("Error:", err)
+            setTransactionError(err instanceof Error ? err : new Error(String(err)))
             setIsLoading(false)
           },
         }
       )
     } catch (err) {
-      const error = err instanceof Error ? err : new Error(String(err))
-      setTransactionError(error)
-      console.error("Error cooking pizza:", err)
+      setTransactionError(err instanceof Error ? err : new Error(String(err)))
       setIsLoading(false)
     }
-  }
+  }, [signAndExecute])
 
-  const contractData: ContractData | null = fields
-    ? {
-      owner: fields.owner,
+  const updateProfile = useCallback(async (profileId: string, username: string, bio: string) => {
+    try {
+      setIsLoading(true)
+      setTransactionError(null)
+      const tx = new Transaction()
+      
+      tx.moveCall({
+        arguments: [
+          tx.object(profileId),
+          tx.pure.string(username),
+          tx.pure.string(bio),
+        ],
+        target: `${PACKAGE_ID}::${CONTRACT_MODULE}::${CONTRACT_METHODS.UPDATE_PROFILE}`,
+      })
+
+      signAndExecute(
+        { transaction: tx },
+        {
+          onSuccess: ({ digest }) => handleTransactionSuccess(digest),
+          onError: (err) => {
+            setTransactionError(err instanceof Error ? err : new Error(String(err)))
+            setIsLoading(false)
+          },
+        }
+      )
+    } catch (err) {
+      setTransactionError(err instanceof Error ? err : new Error(String(err)))
+      setIsLoading(false)
     }
-    : null
+  }, [signAndExecute])
 
-  const clearObject = () => {
-    setObjectId(null)
-    setTransactionError(null)
-    if (typeof window !== "undefined") {
-      window.location.hash = ""
+  const createPost = useCallback(async (profileId: string, content: string) => {
+    try {
+      setIsLoading(true)
+      setTransactionError(null)
+      const tx = new Transaction()
+      
+      tx.moveCall({
+        arguments: [
+          tx.object(profileId),
+          tx.pure.string(content),
+          tx.object("0x6"), // Clock object
+        ],
+        target: `${PACKAGE_ID}::${CONTRACT_MODULE}::${CONTRACT_METHODS.CREATE_POST}`,
+      })
+
+      signAndExecute(
+        { transaction: tx },
+        {
+          onSuccess: ({ digest }) => handleTransactionSuccess(digest),
+          onError: (err) => {
+            setTransactionError(err instanceof Error ? err : new Error(String(err)))
+            setIsLoading(false)
+          },
+        }
+      )
+    } catch (err) {
+      setTransactionError(err instanceof Error ? err : new Error(String(err)))
+      setIsLoading(false)
     }
-  }
+  }, [signAndExecute])
 
-  const actions: ContractActions = {
-    cook,
-    clearObject,
-  }
+  const likePost = useCallback(async (postId: string) => {
+    try {
+      setIsLoading(true)
+      setTransactionError(null)
+      const tx = new Transaction()
+      
+      tx.moveCall({
+        arguments: [tx.object(postId)],
+        target: `${PACKAGE_ID}::${CONTRACT_MODULE}::${CONTRACT_METHODS.LIKE_POST}`,
+      })
+
+      signAndExecute(
+        { transaction: tx },
+        {
+          onSuccess: ({ digest }) => handleTransactionSuccess(digest),
+          onError: (err) => {
+            setTransactionError(err instanceof Error ? err : new Error(String(err)))
+            setIsLoading(false)
+          },
+        }
+      )
+    } catch (err) {
+      setTransactionError(err instanceof Error ? err : new Error(String(err)))
+      setIsLoading(false)
+    }
+  }, [signAndExecute])
+
+  const unlikePost = useCallback(async (postId: string) => {
+    try {
+      setIsLoading(true)
+      setTransactionError(null)
+      const tx = new Transaction()
+      
+      tx.moveCall({
+        arguments: [tx.object(postId)],
+        target: `${PACKAGE_ID}::${CONTRACT_MODULE}::${CONTRACT_METHODS.UNLIKE_POST}`,
+      })
+
+      signAndExecute(
+        { transaction: tx },
+        {
+          onSuccess: ({ digest }) => handleTransactionSuccess(digest),
+          onError: (err) => {
+            setTransactionError(err instanceof Error ? err : new Error(String(err)))
+            setIsLoading(false)
+          },
+        }
+      )
+    } catch (err) {
+      setTransactionError(err instanceof Error ? err : new Error(String(err)))
+      setIsLoading(false)
+    }
+  }, [signAndExecute])
+
+  const createComment = useCallback(async (postId: string, content: string) => {
+    try {
+      setIsLoading(true)
+      setTransactionError(null)
+      const tx = new Transaction()
+      
+      tx.moveCall({
+        arguments: [
+          tx.object(postId),
+          tx.pure.string(content),
+          tx.object("0x6"), // Clock object
+        ],
+        target: `${PACKAGE_ID}::${CONTRACT_MODULE}::${CONTRACT_METHODS.CREATE_COMMENT}`,
+      })
+
+      signAndExecute(
+        { transaction: tx },
+        {
+          onSuccess: ({ digest }) => handleTransactionSuccess(digest),
+          onError: (err) => {
+            setTransactionError(err instanceof Error ? err : new Error(String(err)))
+            setIsLoading(false)
+          },
+        }
+      )
+    } catch (err) {
+      setTransactionError(err instanceof Error ? err : new Error(String(err)))
+      setIsLoading(false)
+    }
+  }, [signAndExecute])
+
+  const followUser = useCallback(async (profileId: string, userAddress: string) => {
+    try {
+      setIsLoading(true)
+      setTransactionError(null)
+      const tx = new Transaction()
+      
+      tx.moveCall({
+        arguments: [
+          tx.object(profileId),
+          tx.pure.address(userAddress),
+          tx.object("0x6"), // Clock object
+        ],
+        target: `${PACKAGE_ID}::${CONTRACT_MODULE}::${CONTRACT_METHODS.FOLLOW_USER}`,
+      })
+
+      signAndExecute(
+        { transaction: tx },
+        {
+          onSuccess: ({ digest }) => handleTransactionSuccess(digest),
+          onError: (err) => {
+            setTransactionError(err instanceof Error ? err : new Error(String(err)))
+            setIsLoading(false)
+          },
+        }
+      )
+    } catch (err) {
+      setTransactionError(err instanceof Error ? err : new Error(String(err)))
+      setIsLoading(false)
+    }
+  }, [signAndExecute])
+
+  const sharePost = useCallback(async (postId: string, recipient: string) => {
+    try {
+      setIsLoading(true)
+      setTransactionError(null)
+      const tx = new Transaction()
+      
+      tx.moveCall({
+        arguments: [
+          tx.object(postId),
+          tx.pure.address(recipient),
+        ],
+        target: `${PACKAGE_ID}::${CONTRACT_MODULE}::${CONTRACT_METHODS.SHARE_POST}`,
+      })
+
+      signAndExecute(
+        { transaction: tx },
+        {
+          onSuccess: ({ digest }) => handleTransactionSuccess(digest),
+          onError: (err) => {
+            setTransactionError(err instanceof Error ? err : new Error(String(err)))
+            setIsLoading(false)
+          },
+        }
+      )
+    } catch (err) {
+      setTransactionError(err instanceof Error ? err : new Error(String(err)))
+      setIsLoading(false)
+    }
+  }, [signAndExecute])
+
+  const getPostComments = useCallback(async (postId: string): Promise<Comment[]> => {
+    try {
+      // NOTE: This currently only fetches comments OWNED by the current user due to getOwnedObjects.
+      // In a real app, you'd likely use an Indexer or Shared Objects to see all comments.
+      const objects = await iotaClient.getOwnedObjects({
+        owner: address!,
+        filter: {
+          StructType: `${PACKAGE_ID}::${CONTRACT_MODULE}::Comment`,
+        },
+        options: {
+          showContent: true,
+        },
+      })
+
+      const comments = objects.data
+        .map(obj => {
+           if (obj.data?.content?.dataType !== "moveObject") return null;
+           const fields = obj.data.content.fields as any;
+           return {
+             id: obj.data.objectId,
+             post_id: fields.post_id,
+             author: fields.author,
+             content: fields.content,
+             created_at: Number(fields.created_at)
+           } as Comment;
+        })
+        .filter((c): c is Comment => c !== null && c.post_id === postId)
+        .sort((a, b) => a.created_at - b.created_at) // Oldest first
+
+      return comments;
+    } catch (error) {
+      console.error("Error fetching comments:", error)
+      return []
+    }
+  }, [iotaClient, address])
+
+  const getProfileByOwner = useCallback(async (ownerAddress: string): Promise<UserProfile | null> => {
+    try {
+      const objects = await iotaClient.getOwnedObjects({
+        owner: ownerAddress,
+        filter: {
+          StructType: `${PACKAGE_ID}::${CONTRACT_MODULE}::UserProfile`,
+        },
+        options: {
+          showContent: true,
+        },
+      });
+
+      if (objects.data.length > 0 && objects.data[0].data) {
+        return extractUserProfile(objects.data[0].data);
+      }
+      return null;
+    } catch (e) {
+      console.error("Error fetching profile for:", ownerAddress, e);
+      return null;
+    }
+  }, [iotaClient])
+
+  const checkIsFollowing = useCallback(async (targetAddress: string): Promise<boolean> => {
+    try {
+      if (!address) return false;
+      const objects = await iotaClient.getOwnedObjects({
+        owner: address,
+        filter: {
+          StructType: `${PACKAGE_ID}::${CONTRACT_MODULE}::Follow`,
+        },
+        options: {
+          showContent: true,
+        },
+      });
+
+      // Check if any follow object points to targetAddress
+      return objects.data.some(obj => {
+         if (obj.data?.content?.dataType !== "moveObject") return false;
+         const fields = obj.data.content.fields as any;
+         return fields.following === targetAddress;
+      });
+    } catch (e) {
+      console.error("Error checking follow status:", e);
+      return false;
+    }
+  }, [iotaClient, address]);
+
+  // Event Polling for New Posts
+  const [newPostsCount, setNewPostsCount] = useState(0)
+
+  useEffect(() => {
+    if (!address) return
+
+    // Poll for new events every 5 seconds
+    const interval = setInterval(async () => {
+      try {
+        // Query events
+        const events = await iotaClient.queryEvents({
+          query: {
+             MoveModule: { 
+               package: PACKAGE_ID, 
+               module: CONTRACT_MODULE 
+             }
+          },
+          limit: 5,
+          order: "descending"
+        })
+
+        if (events.data.length > 0) {
+           // Basic check: if the latest event is newer than the latest post we have
+           const latestEvent = events.data[0];
+           const eventTimestamp = Number(latestEvent.timestampMs || 0);
+           
+           if (allPosts.length > 0) {
+              const latestPostTime = allPosts[0].created_at;
+              if (eventTimestamp > latestPostTime) {
+                 // Count how many are newer
+                 const newCount = events.data.filter(e => Number(e.timestampMs) > latestPostTime).length;
+                 if (newCount > 0) {
+                   setNewPostsCount(newCount);
+                 }
+              }
+           }
+        }
+      } catch (e) {
+        console.error("Error polling events:", e)
+      }
+    }, 5000)
+
+    return () => clearInterval(interval)
+  }, [iotaClient, address, allPosts])
+
+  const actions: ContractActions & { 
+    getPostComments: (postId: string) => Promise<Comment[]>, 
+    getProfileByOwner: (owner: string) => Promise<UserProfile | null>,
+    checkIsFollowing: (target: string) => Promise<boolean>
+  } = useMemo(() => ({
+    createProfile,
+    updateProfile,
+    createPost,
+    likePost,
+    unlikePost,
+    createComment,
+    followUser,
+    sharePost,
+    getPostComments,
+    getProfileByOwner,
+    checkIsFollowing,
+  }), [
+    createProfile,
+    updateProfile,
+    createPost,
+    likePost,
+    unlikePost,
+    createComment,
+    followUser,
+    sharePost,
+    getPostComments,
+    getProfileByOwner,
+    checkIsFollowing
+  ])
 
   const contractState: ContractState = {
-    isLoading: (isLoading && !objectId) || isPending || isFetching,
+    isLoading: isLoading || isPending,
     isPending,
-    isConfirming: false,
-    isConfirmed: !!hash && !isLoading && !isPending,
     hash,
-    error: queryError || transactionError,
+    error: transactionError,
   }
 
   return {
-    data: contractData,
     actions,
     state: contractState,
-    objectId,
-    isOwner,
-    objectExists,
-    hasValidData,
+    userProfile,
+    allPosts,
+    refetchPosts: async () => {
+        await fetchAllPosts();
+        setNewPostsCount(0); // Reset count on refetch
+    },
+    newPostsCount,
   }
 }

@@ -1,0 +1,9 @@
+[package]
+name = "social_media"
+edition = "2024.beta"
+
+[dependencies]
+Iota = { git = "https://github.com/iotaledger/iota.git", subdir = "crates/iota-framework/packages/iota-framework", rev = "mainnet" }
+
+[addresses]
+social_media = "0x0"
