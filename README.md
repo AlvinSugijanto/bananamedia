@@ -24,21 +24,7 @@ A decentralized social media platform built on IOTA blockchain using Move smart 
 npm install --legacy-peer-deps
 ```
 
-### 2. Deploy Smart Contract
-
-```bash
-cd contract/social_media
-iota move build
-iota client publish
-```
-
-After deployment, copy the package ID and update `lib/config.ts`:
-
-```typescript
-export const TESTNET_PACKAGE_ID = "0xYOUR_PACKAGE_ID";
-```
-
-### 3. Run Development Server
+### 2. Run Development Server
 
 ```bash
 npm run dev
