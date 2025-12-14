@@ -25,7 +25,15 @@ A decentralized social media platform built on IOTA blockchain using Move smart 
 npm install --legacy-peer-deps
 ```
 
-### 2. Run Development Server
+### 2. Configure Environment
+
+Copy the example environment file and update it with your credentials:
+
+```bash
+cp .env.example .env
+```
+
+### 3. Run Development Server
 
 ```bash
 npm run dev
